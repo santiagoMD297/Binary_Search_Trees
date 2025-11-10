@@ -22,16 +22,21 @@ class Tree:
         Inserts a value into the binary search tree.
         """
         if self.root is None:
-            
-        pass
+            self.root = Node(value)
+            return
+        current = self.root
+        if value < current.value:
+            if current.left is None:
+                current.left = Node(value)
+            else:
+                current = current.left
 
     def search(self, value):
         """
         Searches for a value in the binary search tree.
         Returns True if found, False otherwise.
         """
-        # Students will implement this
-        pass
+        
 
     def inorder_traversal(self):
         """
